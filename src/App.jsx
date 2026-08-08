@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -32,7 +32,7 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <div style={{ minHeight: '100vh', background: 'var(--bg-primary)' }}>
         {/* Navbar is shown on all pages except Builder (full-screen editor) */}
         <Routes>

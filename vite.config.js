@@ -4,8 +4,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
 
-  // GitHub Pages project path
-  base: '/resume-builder/',
+  // Relative base path for GitHub Pages compatibility
+  base: './',
+
   server: {
     port: 5173,
     open: true,
