@@ -1,0 +1,36 @@
+{
+  "name": "resume-builder",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && powershell -Command \"Copy-Item -Path dist/index.html -Destination dist/404.html\"",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "dev:server": "cd server && npm run dev",
+    "start:server": "cd server && npm start"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "gh-pages": "^6.3.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
+    "firebase": "^12.17.0",
+    "framer-motion": "^12.43.0",
+    "html2pdf.js": "^0.14.0",
+    "lucide-react": "^1.30.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-hook-form": "^7.85.0",
+    "react-icons": "^5.7.0",
+    "react-redux": "^9.3.0",
+    "react-router-dom": "^7.18.2"
+  }
+}
