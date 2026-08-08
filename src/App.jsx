@@ -32,7 +32,7 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div style={{ minHeight: '100vh', background: 'var(--bg-primary)' }}>
         {/* Navbar is shown on all pages except Builder (full-screen editor) */}
         <Routes>
